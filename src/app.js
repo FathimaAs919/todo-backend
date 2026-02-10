@@ -6,9 +6,12 @@ const taskRoutes = require("./routes/taskRoutes");
 
 const app = express();
 
+
 app.use(cors({
-    origin: "*"
-  }));
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
+
   
 app.use(express.json());
 
